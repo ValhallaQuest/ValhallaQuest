@@ -360,6 +360,173 @@ justify-content: center;
     box-shadow: 0 5px 15px rgba(255, 140, 0, 0.6); /* Sombra suave */
 }
 
+.seccion-comentarios h1{
+    font-size:60px;
+    font-weight: 700;
+    text-align: center;
+    color: #1c1c1c;
+}
+
+.seccion-comentarios h1 span{ 
+    font-size:60px;
+    font-weight: 700;
+    text-align: center;
+    color: #ff0000;
+}
+
+.container-formulario{
+    display: flex;
+}
+.parrafo-formulario-curso{
+  
+    flex: 1;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+}
+.parrafo-formulario-curso p{
+    color: #1c1c1c;
+    text-align: center;
+    font-weight: 500;
+   
+    font-size: 24px;
+}
+
+
+.caja-formulario{
+    flex: 1;
+}
+
+
+.caja-formulario label{
+    color: #1c1c1c;
+    text-align: center;
+    font-weight: 600;
+   
+    font-size: 20px;
+}
+
+.caja-formulario input,
+.caja-formulario textarea {
+    background-color: #ff6600;
+    border: 4px solid #1c1c1c;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1c1c1c;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    outline: none;
+}
+
+/* Efecto de fuego al hacer hover o focus */
+.caja-formulario input:hover, 
+.caja-formulario input:focus,
+.caja-formulario textarea:hover, 
+.caja-formulario textarea:focus {
+    background-color: #ff4500;
+    border: 4px solid #1c1c1c;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.8);
+    animation: fireAnimation 0.6s infinite alternate ease-in-out;
+    color:#1c1c1c;
+}
+
+/* Animación de fuego */
+@keyframes fireAnimation {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 102, 0, 0.8), 0 0 20px rgba(255, 140, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.9), 0 0 25px rgba(255, 165, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 140, 0, 1), 0 0 30px rgba(255, 215, 0, 0.8);
+    }
+}
+
+
+
+.caja-enviar button{
+    background-color: #ff8c00;
+    border: 4px solid #1c1c1c;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c1c1c;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.caja-enviar button:hover {
+    transform: scale(1.1);
+    background-color: #ff6600; /* Color más intenso al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.6); /* Sombra suave */
+}
+.caja-imagen-logo{
+    width: 100%;
+}
+
+.caja-imagen-logo img{
+    width: 100%;
+}
+
+footer{
+    background:#1c1c1c;
+    display: flex
+    ;
+        align-items: center;
+        justify-content: center;
+     
+}
+
+.div-copyright{
+    display: flex
+    ;
+        align-items: center;
+        justify-content: center;
+        padding:15px
+}
+
+.div-copyright p{
+    color:#fff;
+   margin: 0px;
+   font-weight: 600;
+   font-size: 20px;
+   font-family: Cinzel;
+}
+
+.btn-whatsapp span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 19px;
+    font-family: 'Cinzel';
+}
+
+.btn-whatsapp svg {
+    height: 2rem;
+    width: 2rem;
+}.btn-whatsapp {
+    display: flex
+;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    right: 3px;
+    bottom: 1rem;
+    border-radius: 30px;
+    text-align: center;
+    z-index: 999;
+    float: right;
+    background: #ff0000;
+    border:4px solid #1c1c1c;
+    width: auto;
+    padding: 15px 20px;
+    gap: 13px;
+    cursor: pointer;
+}
 
 @media (min-width: 992px) and (max-width: 1399px) {
     .game-container-card {
@@ -512,5 +679,37 @@ justify-content: center;
 
     .lanzamiento-info{
         width: auto;
+    }
+
+
+    .seccion-comentarios h1{
+        font-size:30px;
+      
+    }
+    
+    .seccion-comentariosh1 span{ 
+        font-size:30px;
+      
+    }
+
+    .parrafo-formulario-curso p {
+        color: #1c1c1c;
+        text-align: center;
+        font-weight: 600;
+        margin: 1rem;
+        font-size: 18px;
+    }
+    .container-formulario {
+        display: flex
+    ;
+        flex-direction: column;
+    }
+
+    .btn-whatsapp span {
+        color: #fff;
+        font-weight: 700;
+        font-size: 19px;
+        font-family: 'Cinzel';
+        display: none;
     }
 }
