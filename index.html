@@ -563,25 +563,126 @@
 
 </div>
 
-    <!-- Sección "¿Qué juego deseas?"
-    <section class="text-center my-5">
-        <h2>¿Qué juego deseas?</h2>
-        <button class="btn btn-danger">Explorar Tienda</button>
-    </section> -->
+    <div class="seccion-comentarios">
+    <section class="container">
+       
+        <h1>Compártenos tus <span>intereses</span> </h1>
 
-    <!-- Pie de página 
-    <footer class="">
-        <p>Síguenos en nuestras redes sociales</p>
-        <div class="social-icons">
-            <a href="#">🔵</a>
-            <a href="#">🟢</a>
-            <a href="#">🔴</a>
+        <div class="container-formulario">
+
+        <div class="parrafo-formulario-curso">      
+            <p>Déjanos en la caja de comentarios qué videojuego deseas obtener. ¡Queremos saber cuáles son tus favoritos!</p>
+        <div class="caja-imagen-logo">
+<img src="img/logovalhalla.png">
         </div>
-    </footer>
--->
+        
+        </div>
+
+        <div class="caja-formulario">
+         
+                <!-- Fila 1: Nombre y Apellido -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombres:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required oninput="guardarDatos()">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label">Apellidos:</label>
+                        <input type="text" id="apellido" name="apellido" class="form-control" required oninput="guardarDatos()">
+                    </div>
+                </div>
+        
+                <!-- Fila 2: Caja de comentarios -->
+                <div class="mb-3">
+                    <label for="comentario" class="form-label">Comentario:</label>
+                    <textarea id="comentario" name="comentario" class="form-control" rows="8" required></textarea>
+                </div>
+        
+                <!-- Fila 3: Botón alineado a la derecha -->
+                <div class="caja-enviar d-flex justify-content-end">
+                    <button type="button" class="btn" onclick="enviarWhatsApp()">Enviar Comentario</button>
+                </div>
+          
+        </div>
+    </div>
+       
+    </section> 
+</div>
+
+
+  
+<div class="btn-whatsapp" onclick="window.open('https://wa.me/51929672602?text=Hola%20Valhalla%20Quest,%20deseo%20más%20información%20acerca%20de%20los%20juegos%20de%20preventa', '_blank')">
+        <span>¡Conversemos!</span>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="300" height="300" xmlns:svgjs="http://svgjs.dev/svgjs"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><g id="WA_Logo">
+<g>
+<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M436.535,74.406C388.635,26.449,324.933,0.028,257.063,0    C117.222,0,3.407,113.807,3.352,253.692c-0.019,44.716,11.664,88.362,33.866,126.838L1.225,512l134.496-35.281    c37.057,20.213,78.78,30.866,121.242,30.881h0.104c0.008,0-0.007,0,0.001,0c139.827,0,253.652-113.818,253.708-253.706    C510.802,186.103,484.436,122.36,436.535,74.406z M257.066,464.752h-0.086c-37.839-0.014-74.952-10.181-107.328-29.394l-7.7-4.57    L62.14,451.725l21.303-77.816l-5.014-7.979c-21.109-33.574-32.258-72.378-32.241-112.223    C46.234,137.441,140.833,42.85,257.15,42.85c56.324,0.019,109.27,21.983,149.084,61.842    c39.813,39.858,61.726,92.84,61.705,149.185C467.891,370.153,373.294,464.752,257.066,464.752z M372.734,306.819    c-6.339-3.173-37.506-18.507-43.318-20.625c-5.81-2.115-10.037-3.172-14.263,3.172c-4.225,6.346-16.374,20.626-20.073,24.857    c-3.697,4.229-7.395,4.761-13.734,1.586c-6.34-3.173-26.766-9.866-50.979-31.465c-18.846-16.81-31.568-37.569-35.266-43.916    c-3.698-6.346-0.394-9.776,2.779-12.937c2.852-2.841,6.34-7.405,9.509-11.106c3.17-3.701,4.226-6.347,6.339-10.575    c2.113-4.232,1.057-7.934-0.528-11.106c-1.585-3.173-14.263-34.377-19.545-47.071c-5.146-12.359-10.372-10.686-14.263-10.882    c-3.693-0.184-7.924-0.223-12.15-0.223c-4.226,0-11.094,1.586-16.905,7.932c-5.811,6.347-22.187,21.684-22.187,52.885    c0,31.204,22.715,61.348,25.885,65.579c3.169,4.232,44.701,68.262,108.294,95.722c15.124,6.532,26.933,10.432,36.139,13.353    c15.186,4.826,29.006,4.145,39.929,2.512c12.18-1.819,37.506-15.334,42.789-30.142c5.281-14.811,5.281-27.503,3.697-30.146    C383.3,311.58,379.073,309.993,372.734,306.819z" fill="#ffffff" fill-opacity="1" data-original-color="#000000ff" stroke="none" stroke-opacity="1"></path>
+</g>
+</g></g></svg>
+    
+        
+  
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
+<script>
+    // Función para establecer una cookie
+    function setCookie(nombre, valor, dias) {
+        let fecha = new Date();
+        fecha.setTime(fecha.getTime() + (dias * 24 * 60 * 60 * 1000));
+        document.cookie = nombre + "=" + valor + ";expires=" + fecha.toUTCString() + ";path=/";
+    }
 
+    // Función para obtener una cookie
+    function getCookie(nombre) {
+        let nombreEQ = nombre + "=";
+        let cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            let c = cookies[i].trim();
+            if (c.indexOf(nombreEQ) === 0) {
+                return c.substring(nombreEQ.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    // Función para guardar los datos en cookies
+    function guardarDatos() {
+        let nombre = document.getElementById("nombre").value;
+        let apellido = document.getElementById("apellido").value;
+        setCookie("nombre", nombre, 7);
+        setCookie("apellido", apellido, 7);
+    }
+
+    // Función para cargar los datos de las cookies en los campos
+    function cargarDatos() {
+        let nombre = getCookie("nombre");
+        let apellido = getCookie("apellido");
+
+        if (nombre) document.getElementById("nombre").value = nombre;
+        if (apellido) document.getElementById("apellido").value = apellido;
+    }
+
+    // Función para abrir WhatsApp con el mensaje personalizado
+    function enviarWhatsApp() {
+        let nombre = document.getElementById("nombre").value.trim();
+        let apellido = document.getElementById("apellido").value.trim();
+        let comentario = document.getElementById("comentario").value.trim();
+
+        if (nombre === "" || apellido === "" || comentario === "") {
+            alert("Por favor, completa todos los campos antes de enviar.");
+            return;
+        }
+
+        let mensaje = `Hola, soy ${nombre} ${apellido} y mi comentario es el siguiente: ${comentario}`;
+        let url = `https://api.whatsapp.com/send/?phone=51929672602&text=${encodeURIComponent(mensaje)}`;
+
+        window.open(url, "_blank");
+    }
+
+    // Cargar datos al cargar la página
+    window.onload = cargarDatos;
+</script>
 </html>
