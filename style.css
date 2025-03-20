@@ -34,142 +34,97 @@ header h1 span {
 }
 
 
-
-.banner {
- 
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
+.banners {
+    width: 100%;
+    position:relative;
+  display: flex
+  ;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 4px solid #1c1c1c;
+  }
   
-    text-align: center;
-    height: 720px;
-    border-bottom: 4px solid #1c1c1c;
-    background: linear-gradient(180deg, #ff8000 0%, #ff4000 40%, #cc0000 70%, #660000 100%);
-}
-
-.banner h2 {
-    font-family: 'IM Fell English SC', serif;
-    font-size: 80px;
-    font-weight: 700;
-    color: #fff;
-    
-}
-
-.banner h2 span {
-    font-family: "Cinzel", serif;
-    font-size: 50px; /* Más grande que el h2 */
-    display: block; /* Para que esté en una nueva línea */
-    color: #fff; /* Color fuego */
-   
-}
-
-.lado-izquierdo{
-    display: flex
-    ;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-}
-.social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.btn-click {
-   
-    color: #fff;
+  .flecha-izquierda-banner{
+          position: absolute;
+      left: 20px;
+      width: 20px;
+      cursor:pointer;
   
-    font-size: 20px;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: 3px solid #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
-    text-decoration: none;
-}
-
-.btn-click:hover {
-    background: #fff;
-    color: #1c1c1c; /* Mantiene la letra blanca */
-    border: 3px solid #000; /* Borde negro para que resalte */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-    transform: scale(1.1);
-}
-
-
-.btn-click:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.5);
-}
-
-
-.social-icons svg {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease-in-out; /* Animación suave */
-}
-
-.social-icons svg:hover {
-    transform: scale(1.2); /* Aumenta el tamaño un 20% */
-}
-
-
-
-
-
-
-
-.game-container {
-    position: relative;
-    width: 600px;
-    height: 350px;
+  }
+  .flecha-izquierda-banner img{
+          width: 100%;
+      height: 100%;
+  }
+  
+  
+  .flecha-derecha-banner{
+          position: absolute;
+      right: 20px;
+      width: 20px;
+      cursor:pointer;
+  
+  }
+  .flecha-derecha-banner img{
+          width: 100%;
+      height: 100%;
+      transform: rotate(180deg);
+  }
+  
+  /* Contenedor del carrusel, se usa flex para alinear las imÃ¡genes horizontalmente */
+  .div-banner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
-}
+    flex-direction: row; /* Alineamos las imÃ¡genes en una fila horizontal */
+    width: 100%;
+    transition: transform 1s ease-in-out; /* AnimaciÃ³n para el deslizamiento */
+  }
+  .banners-mobile{
+      display:none;
+  }
+  /* Estilo para cada imagen de banner */
+  .img-banner {
+    width: 100%; /* Cada imagen ocuparÃ¡ un 100% del ancho del contenedor */
+    display: block; /* Las imÃ¡genes se mostrarÃ¡n de forma continua */
+    cursor:pointer;
+  }
+  
+  /* Ocultar los banners que no deben ser visibles */
+  .img-banner.hidden {
+    display: none;
+  }
+  
+  .img-banner-2 {
+    width: 100%; /* Cada imagen ocuparÃ¡ un 100% del ancho del contenedor */
+    display: block; /* Las imÃ¡genes se mostrarÃ¡n de forma continua */
+    cursor:pointer;
+  }
+  
+  /* Ocultar los banners que no deben ser visibles */
+  .img-banner-2.hidden {
+    display: none;
+  }
+  
+  /* Asegura que las imÃ¡genes ocupen todo el espacio del contenedor */
+  .img-banner img {
+    width: 100%;
+    height: auto; /* Mantiene la proporciÃ³n de las imÃ¡genes */
+  }
+  
+  .img-banner-2 img {
+    width: 100%;
+    height: auto; /* Mantiene la proporciÃ³n de las imÃ¡genes */
+  }
+  
+  
+  
+  /* Banner visible, sin modificaciones */
+  .img-banner.active {
+    display: block;
+  }
+  
+  .img-banner-2.active {
+    display: block;
+  }
 
-.game-img {
-    width: 220px;
-    height: auto;
-    position: absolute;
-    transition: transform 0.6s ease, opacity 0.5s ease;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-}
-
-/* Dos imágenes al frente */
-.game-img:nth-child(1) {
-    transform: translateX(-110px);
-    z-index: 2;
-}
-
-.game-img:nth-child(2) {
-    transform: translateX(110px);
-    z-index: 2;
-}
-
-/* Imagen trasera (oculta en el sobre) */
-.game-img:nth-child(3) {
-    transform: translateY(50px) scale(0.9);
-    z-index: 1;
-    opacity: 0.6;
-}
-
-/* 🔥 Efecto cuando pasas el mouse sobre el contenedor (solo afecta la imagen trasera) */
-.game-container:hover .game-img:nth-child(3) {
-    transform: translateY(-30px) scale(1.1);
-    opacity: 1;
-    z-index: 3;
-}
 .seccion-preventa{
 padding: 60px 0px;
 }
@@ -587,6 +542,13 @@ footer{
     }
 }
 @media (max-width: 991px) {
+    .banners-web{
+        display: none;
+    }
+
+    .banners-mobile{
+        display: flex;
+    }
     .game-container-card {
         grid-template-columns: repeat(1, 1fr); /* 1 columna para mejor adaptación */
         gap: 30px;
