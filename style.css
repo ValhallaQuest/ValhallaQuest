@@ -8,12 +8,17 @@
 
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-   
-    border-bottom: 4px solid #1c1c1c;
+    display: flex
+    ;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-between;
+        border-bottom: 4px solid #1c1c1c;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
 }
 
 header h1 {
@@ -23,6 +28,19 @@ header h1 {
     display: flex;
     gap: 2px; /* Espacio entre letras */
     margin: 0;
+
+}
+.redes-sociales{
+    display: flex;
+    gap: 15px;
+}
+.redes-sociales a{
+    text-decoration: none;
+}
+
+.redes-sociales svg{
+    width: 35px;
+    height: 35px;
 }
 
 /* Aplicar degradado de fuego a cada letra */
@@ -617,7 +635,7 @@ footer{
     }
 
     header h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
 
@@ -673,5 +691,15 @@ footer{
         font-size: 19px;
         font-family: 'Cinzel';
         display: none;
+    }
+
+    header {
+       
+        flex-direction: column;
+    }
+
+    .redes-sociales svg {
+        width: 20px;
+        height: 20px;
     }
 }
